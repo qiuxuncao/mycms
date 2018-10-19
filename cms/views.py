@@ -114,5 +114,7 @@ def count_blog(request):
     return render(request, 'count_blog.html', {'auth_count_blog': json.dumps(auth_count_blog)})
 
 
-
+def tag_manage(request):
+    pass
+    return render(request,'tag_manage.html')
 

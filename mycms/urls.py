@@ -1,3 +1,4 @@
+# coding=utf-8
 """mycms URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
@@ -18,12 +19,14 @@ from django.contrib import admin
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^index/$', 'cms.views.index'),
-    url(r'^notfound/$', 'cms.views.notfound'),
+    url(r'^notfound/$', 'cms.views.notfound'),# 404页面
     url(r'^favorite/$', 'cms.views.favorite'),
-    url(r'^blog/$', 'cms.views.blog'),
+    url(r'^blog/$', 'cms.views.blog'), # 博客页
     url(r'^edit_article/(?P<id>[0-9]+)/$', 'cms.views.edit_article'),
-    url(r'^create_blog/$', 'cms.views.create_blog'),
-    url(r'^blog_detail/$', 'cms.views.blog_detail'),
+    url(r'^create_blog/$', 'cms.views.create_blog'), # 创建博客页面
+    url(r'^blog_detail/$', 'cms.views.blog_detail'), #博客列表页面
     url(r'^sub_article/$', 'cms.views.sub_article'),
-    url(r'^count_blog/$', 'cms.views.count_blog'),
+    url(r'^count_blog/$', 'cms.views.count_blog'), #博客柱状图
+    url(r'^tag_manage/$','cms.views.tag_manage'), # 标签管理
+
 ]
